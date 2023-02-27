@@ -17,11 +17,9 @@ call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#
 call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#y',
       \ ' %{&fenc} %{nerdfont#platform#find()} ')
 ""
-" Eval the expression then append to |airline|'s tabline.
-"
-" Default: '" " . nerdfont#find() . " "'`
+" Expand '%s' to icon then append to |airline|'s tabline.
 call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#tabline',
-      \ '" " . nerdfont#find() . " "')
+      \ ' %s ')
 
 ""
 " Main function to render |airline|'s section x and y.

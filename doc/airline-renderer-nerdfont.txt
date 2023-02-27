@@ -28,9 +28,8 @@ Override |airline|'s section y.
 Default: ' %{&fenc} %{nerdfont#platform#find()} '`
 
                *airline-renderer-nerdfont:g:airline_renderer_nerdfont#tabline*
-Eval the expression then append to |airline|'s tabline.
-
-Default: '" " . nerdfont#find() . " "'`
+Expand '%s' to icon then append to |airline|'s tabline.
+Default: ' %s ' `
 
                 *airline-renderer-nerdfont:g:loaded_airline_renderer_nerdfont*
 Configure if load airline-renderer-nerdfont.
