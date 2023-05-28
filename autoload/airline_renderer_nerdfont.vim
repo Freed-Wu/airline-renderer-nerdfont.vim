@@ -13,9 +13,9 @@ call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#
 ""
 " Override |airline|'s section y.
 "
-" Default: ' %{&fenc} %{nerdfont#platform#find()} '`
+" Default: ' %{&fenc} %{airline_renderer_nerdfont#fileformat()} '`
 call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#y',
-      \ ' %{&fenc} %{nerdfont#platform#find()} ')
+      \ ' %{&fenc} %{airline_renderer_nerdfont#fileformat()} ')
 ""
 " Expand '%s' to icon then append to |airline|'s tabline.
 call g:airline_renderer_nerdfont#utils#plugin.Flag('g:airline_renderer_nerdfont#tabline',
@@ -29,5 +29,23 @@ function! airline_renderer_nerdfont#main(...) abort
   let w:airline_section_x .= g:airline_renderer_nerdfont#x_suffix
   if airline#parts#ffenc() !=? ''
     let w:airline_section_y = g:airline_renderer_nerdfont#y
+  endif
+endfunction
+
+""
+" Use icon to display fileformat.
+function! airline_renderer_nerdfont#fileformat() abort
+  if &fileformat ==# 'dos'
+    return nerdfont#platform#find('windows')
+  endif
+  if &fileformat ==# 'mac'
+    return nerdfont#platform#find('macos')
+  endif
+  if &fileformat ==# 'unix'
+    if has('unix')
+      return nerdfont#platform#find()
+    else
+      return nerdfont#platform#find('linux')
+    endif
   endif
 endfunction

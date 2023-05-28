@@ -25,7 +25,7 @@ Default: ' %{nerdfont#find()} '`
                      *airline-renderer-nerdfont:g:airline_renderer_nerdfont#y*
 Override |airline|'s section y.
 
-Default: ' %{&fenc} %{nerdfont#platform#find()} '`
+Default: ' %{&fenc} %{airline_renderer_nerdfont#fileformat()} '`
 
                *airline-renderer-nerdfont:g:airline_renderer_nerdfont#tabline*
 Expand '%s' to icon then append to |airline|'s tabline.
@@ -48,6 +48,10 @@ FUNCTIONS                                *airline-renderer-nerdfont-functions*
 
 airline_renderer_nerdfont#main()            *airline_renderer_nerdfont#main()*
   Main function to render |airline|'s section x and y.
+
+airline_renderer_nerdfont#fileformat()
+                                      *airline_renderer_nerdfont#fileformat()*
+  Use icon to display fileformat.
 
 
 vim:tw=78:ts=8:ft=help:norl:
