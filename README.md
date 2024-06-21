@@ -26,6 +26,8 @@
 [![github/repo-size](https://shields.io/github/repo-size/Freed-Wu/airline-renderer-nerdfont.vim)](https://github.com/Freed-Wu/airline-renderer-nerdfont.vim)
 [![github/v](https://shields.io/github/v/release/Freed-Wu/airline-renderer-nerdfont.vim)](https://github.com/Freed-Wu/airline-renderer-nerdfont.vim)
 
+[![luarocks](https://img.shields.io/luarocks/v/Freed-Wu/airline-renderer-nerdfont.vim)](https://luarocks.org/modules/Freed-Wu/airline-renderer-nerdfont.vim)
+
 [vim-airline](https://github.com/vim-airline/vim-airline) plugin which add file
 type icon through [nerdfont.vim](https://github.com/lambdalisue/nerdfont.vim).
 
